@@ -1,17 +1,14 @@
-   {
-     "main": "src/app.js",
-     "scripts": {
-       "start": "node src/app.js",
-       "dev": "nodemon src/app.js"
-     }
-   }{
+{
   "name": "lookly-server",
   "version": "1.0.0",
   "description": "Backend server for Lookly application",
-  "main": "src/index.js",
+  "engines": {
+    "node": "18.x"
+  },
+  "main": "src/app.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "prisma:studio": "prisma studio",
@@ -21,19 +18,11 @@
     "@prisma/client": "^5.22.0",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "jsonwebtoken": "^9.0.0"
+    "jsonwebtoken": "^9.0.2",
+    "prisma": "^5.22.0"
   },
   "devDependencies": {
-    "@types/jest": "^30.0.0",
-    "@types/supertest": "^6.0.3",
-    "jest": "^30.0.5",
-    "nodemon": "^2.0.22",
-    "prisma": "^5.22.0",
-    "supertest": "^7.1.4"
-  },
-  "prisma": {
-    "seed": "node prisma/seed.js"
+    "nodemon": "^3.0.1"
   }
 }
