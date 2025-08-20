@@ -4,6 +4,9 @@ export default function Home() {
       <div className="text-center">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">Welcome to Lookly!</h1>
         <p className="text-xl text-gray-600">Your fashion app is coming soon...</p>
+        <div className="mt-8">
+          <p className="text-sm text-gray-500">Backend API: https://looklyy.onrender.com</p>
+        </div>
       </div>
     </div>
   );
