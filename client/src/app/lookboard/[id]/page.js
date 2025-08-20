@@ -1,5 +1,3 @@
-'use client'
-
 import { useState, useEffect } from 'react'
 import { useRouter, useParams } from 'next/navigation'
 import Link from 'next/link'
@@ -211,57 +209,4 @@ export default function LookboardDetailPage() {
           </div>
 
           {/* Edit Images Form */}
-          {editing && (
-            <div className="mt-6">
-              <label htmlFor="images" className="block text-sm font-medium text-gray-700 mb-2">
-                Image URLs (comma-separated)
-              </label>
-              <textarea
-                id="images"
-                rows={3}
-                value={editForm.images}
-                onChange={(e) => setEditForm({ ...editForm, images: e.target.value })}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
-                placeholder="https://example.com/image1.jpg, https://example.com/image2.jpg"
-              />
-            </div>
-          )}
-        </div>
-
-        {/* Images Grid */}
-        <div className="bg-white rounded-lg shadow p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-6">Images</h2>
-          {lookboard.images.length === 0 ? (
-            <div className="text-center py-12">
-              <p className="text-gray-500">No images in this lookboard yet.</p>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {lookboard.images.map((imageUrl, index) => (
-                <div key={index} className="group relative">
-                  <img
-                    src={imageUrl}
-                    alt={`Image ${index + 1}`}
-                    className="w-full h-64 object-cover rounded-lg shadow-md group-hover:shadow-lg transition-shadow"
-                    onError={(e) => {
-                      e.target.src = 'https://via.placeholder.com/400x300?text=Image+Not+Found'
-                    }}
-                  />
-                  <div className="absolute top-2 right-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-sm">
-                    {index + 1}
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-
-        {/* Look Suggestions */}
-        <LookSuggestions 
-          lookboardImages={lookboard.images}
-          products={products}
-        />
-      </div>
-    </div>
-  )
-}
+          {editing &
