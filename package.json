@@ -1,4 +1,10 @@
-{
+   {
+     "main": "src/app.js",
+     "scripts": {
+       "start": "node src/app.js",
+       "dev": "nodemon src/app.js"
+     }
+   }{
   "name": "lookly-server",
   "version": "1.0.0",
   "description": "Backend server for Lookly application",
