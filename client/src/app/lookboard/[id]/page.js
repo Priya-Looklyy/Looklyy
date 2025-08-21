@@ -1,11 +1,8 @@
+'use client'
+
 import { useState, useEffect } from 'react'
 import { useRouter, useParams } from 'next/navigation'
 import Link from 'next/link'
-import LookSuggestions from '../../../components/LookSuggestions.js'
-
-export async function generateStaticParams() {
-  return []
-}
 
 export default function LookboardDetailPage() {
   const [lookboard, setLookboard] = useState(null)
