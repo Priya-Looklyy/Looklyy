@@ -4,6 +4,11 @@ import { useState, useEffect } from 'react'
 import { useRouter, useParams } from 'next/navigation'
 import Link from 'next/link'
 
+// This function is required for static export with dynamic routes
+export async function generateStaticParams() {
+  return []
+}
+
 export default function LookboardDetailPage() {
   const [lookboard, setLookboard] = useState(null)
   const [loading, setLoading] = useState(true)
