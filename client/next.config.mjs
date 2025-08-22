@@ -8,6 +8,9 @@ const nextConfig = {
   images: {
     domains: ['picsum.photos', 'images.unsplash.com'],
     unoptimized: true
+  },
+  experimental: {
+    optimizeCss: true
   }
 };
 
