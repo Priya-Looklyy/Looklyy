@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import Dashboard from '../components/Dashboard'
 
+// Force rebuild - v2.0
 export default function Home() {
   const [isLogin, setIsLogin] = useState(true)
   const [formData, setFormData] = useState({
