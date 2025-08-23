@@ -1,10 +1,10 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 
-export default function ProductsPage() {
+function ProductsContent() {
   const [products, setProducts] = useState([])
   const [brands, setBrands] = useState([])
   const [loading, setLoading] = useState(true)
@@ -289,5 +289,13 @@ export default function ProductsPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function ProductsPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="text-lg">Loading...</div></div>}>
+      <ProductsContent />
+    </Suspense>
   )
 }
