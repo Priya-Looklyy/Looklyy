@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "rm -rf .next out && next build && next export",
-    "start": "npx serve@latest out",
+    "start": "npx serve@latest out -p $PORT",
+    "serve": "npx serve@latest out -p $PORT",
     "lint": "next lint",
     "postbuild": "echo 'Build completed successfully'"
   },
