@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: looklyy-frontend
+    env: node
+    plan: starter
+    buildCommand: cd client && npm install && npm run build
+    startCommand: cd client && npm start
+    envVars:
+      - key: NEXT_PUBLIC_API_URL
+        value: https://looklyy.onrender.com
