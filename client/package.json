@@ -9,7 +9,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "bash start.sh",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check:styles": "powershell -ExecutionPolicy Bypass -File check-styles-simple.ps1"
   },
   "dependencies": {
     "react": "^18.2.0",

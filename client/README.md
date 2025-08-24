@@ -1,36 +1,123 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Looklyy - Fashion Lookboard App
 
-## Getting Started
+A beautiful fashion app for creating and managing brand lookboards with a modern purple theme.
 
-First, run the development server:
+## 🚀 Quick Start
 
+### Prerequisites
+- Node.js 18.x or higher
+- npm or yarn
+
+### Installation
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Development
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Building for Production
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Starting Production Server
+```bash
+npm start
+```
 
-## Learn More
+## 🎨 Tailwind Health Check
 
-To learn more about Next.js, take a look at the following resources:
+**IMPORTANT: Always run the health check before pushing to ensure styles are working correctly!**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Running the Health Check
+```bash
+npm run check:styles
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This script will:
+1. ✅ Build the Next.js application
+2. ✅ Start the server locally
+3. ✅ Fetch the homepage
+4. ✅ Check for Tailwind CSS classes
+5. ✅ Verify custom CSS classes are present
+6. ✅ Ensure the page is properly styled
 
-## Deploy on Vercel
+### What the Health Check Validates
+- **Tailwind Classes**: `bg-`, `text-`, `border-`, `rounded-`, `shadow-`, etc.
+- **Custom Classes**: `auth-container`, `auth-box`, `auth-form`, etc.
+- **Critical Elements**: Input fields, buttons, and form styling
+- **CSS Inclusion**: Ensures CSS files are being loaded
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Pre-Deployment Checklist
+Before pushing to production:
+1. ✅ Run `npm run check:styles`
+2. ✅ Ensure all tests pass
+3. ✅ Verify the build completes successfully
+4. ✅ Check that the app renders correctly locally
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎯 Features
+
+- **Beautiful Authentication**: Sliding sign-in/sign-up forms
+- **Purple Theme**: Consistent #8f1eae color scheme
+- **Responsive Design**: Works on all devices
+- **Modern UI/UX**: Smooth animations and transitions
+- **Brand Identity**: Custom Looklyy logo and styling
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js 14, React 18
+- **Styling**: Tailwind CSS, Custom CSS
+- **Authentication**: JWT-based auth
+- **Deployment**: Render (Frontend), Render (Backend)
+
+## 📁 Project Structure
+
+```
+client/
+├── src/
+│   ├── app/
+│   │   ├── page.js          # Main homepage
+│   │   ├── layout.js        # Root layout
+│   │   └── globals.css      # Global styles
+│   └── components/
+│       ├── AuthForm.js      # Authentication component
+│       ├── AuthForm.css     # Auth form styles
+│       └── Dashboard.js     # Dashboard component
+├── check-styles.ps1         # Tailwind health check (Windows)
+├── check-styles.sh          # Tailwind health check (Unix)
+├── start.sh                 # Production start script
+└── package.json
+```
+
+## 🚨 Troubleshooting
+
+### Styles Not Loading
+If you see unstyled content:
+1. Run `npm run check:styles` to diagnose issues
+2. Check that Tailwind CSS is properly configured
+3. Verify CSS imports in components
+4. Ensure build process completes successfully
+
+### Build Failures
+1. Check Node.js version (requires 18.x)
+2. Clear `.next` directory: `rm -rf .next`
+3. Reinstall dependencies: `npm install`
+4. Run health check: `npm run check:styles`
+
+## 📝 Contributing
+
+1. Make your changes
+2. Run `npm run check:styles` to ensure styles work
+3. Test locally with `npm run dev`
+4. Commit and push your changes
+
+## 🎨 Brand Guidelines
+
+- **Primary Color**: #8f1eae (Purple)
+- **Logo**: Custom "Looklyy" design with overlapping circles
+- **Tagline**: "LOOK BOARDS FOR SIMPLY FLAWLESS LOOKS"
+- **Typography**: Modern sans-serif fonts
+- **Style**: Clean, professional, fashion-forward
