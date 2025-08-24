@@ -174,6 +174,19 @@ export default function AuthForm() {
           </div>
         </div>
       </div>
+
+      {/* Logo and Tagline */}
+      <div className="logo-section">
+        <div className="logo">
+          <span className="logo-l">L</span>
+          <span className="logo-oo">
+            <span className="circle circle-1"></span>
+            <span className="circle circle-2"></span>
+          </span>
+          <span className="logo-klyy">klyy</span>
+        </div>
+        <p className="tagline">LOOK BOARDS FOR SIMPLY FLAWLESS LOOKS</p>
+      </div>
     </div>
   )
 }

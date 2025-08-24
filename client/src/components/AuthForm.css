@@ -3,19 +3,99 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #f8f5ff 0%, #e8e0ff 100%);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+}
+
+/* Logo Section */
+.logo-section {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.logo-l {
+  color: #8f1eae;
+  font-size: 64px;
+  font-weight: 900;
+  margin-right: 5px;
+}
+
+.logo-oo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #8f1eae;
+  position: relative;
+  margin: 0 2px;
+}
+
+.circle-1 {
+  margin-right: -8px;
+}
+
+.circle-2 {
+  margin-left: -8px;
+}
+
+.circle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+}
+
+.logo-klyy {
+  color: #8f1eae;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.tagline {
+  color: #8f1eae;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .auth-box {
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(143, 30, 174, 0.15);
   position: relative;
   overflow: hidden;
   width: 768px;
   max-width: 100%;
   min-height: 480px;
+  margin-top: 80px;
 }
 
 .auth-inner {
@@ -56,55 +136,70 @@
 
 .auth-content h2 {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: #333;
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 700;
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   width: 100%;
 }
 
 .form-group input {
-  background: #eee;
-  border: none;
-  padding: 12px 15px;
+  background: #f8f5ff;
+  border: 2px solid transparent;
+  padding: 15px 20px;
   margin: 8px 0;
   width: 100%;
-  border-radius: 5px;
-  font-size: 14px;
+  border-radius: 12px;
+  font-size: 16px;
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
 .form-group input:focus {
   outline: none;
-  background: #f0f0f0;
+  border-color: #8f1eae;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(143, 30, 174, 0.1);
 }
 
 .auth-button {
-  border-radius: 20px;
-  border: 1px solid #ff4b2b;
-  background: #ff4b2b;
+  border-radius: 25px;
+  border: none;
+  background: #8f1eae;
   color: #fff;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 12px 45px;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 15px 50px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  transition: transform 80ms ease-in;
+  transition: all 0.3s ease;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(143, 30, 174, 0.3);
+}
+
+.auth-button:hover {
+  background: #7a1a9a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(143, 30, 174, 0.4);
 }
 
 .auth-button:active {
-  transform: scale(0.95);
+  transform: translateY(0);
 }
 
 .auth-button.ghost {
   background: transparent;
-  border-color: #fff;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.auth-button.ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .auth-overlay {
@@ -116,6 +211,7 @@
   overflow: hidden;
   transition: transform 0.6s ease-in-out;
   z-index: 100;
+  background: linear-gradient(135deg, #8f1eae 0%, #7a1a9a 100%);
 }
 
 .auth-overlay.active {
@@ -149,24 +245,29 @@
 .overlay-panel h1 {
   margin: 0;
   color: #fff;
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .overlay-panel p {
-  font-size: 14px;
-  font-weight: 100;
-  line-height: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
   letter-spacing: 0.5px;
   margin: 20px 0 30px;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .error-message {
-  color: #ff4b2b;
+  color: #e74c3c;
   font-size: 14px;
-  margin-top: 10px;
+  margin-top: 15px;
   text-align: center;
+  background: rgba(231, 76, 60, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(231, 76, 60, 0.2);
 }
 
 /* Animation for overlay */
@@ -187,6 +288,7 @@
   .auth-box {
     width: 100%;
     max-width: 400px;
+    margin-top: 120px;
   }
   
   .auth-form {
@@ -196,5 +298,21 @@
   
   .auth-overlay {
     display: none;
+  }
+
+  .logo {
+    font-size: 36px;
+  }
+
+  .logo-l {
+    font-size: 48px;
+  }
+
+  .logo-klyy {
+    font-size: 28px;
+  }
+
+  .tagline {
+    font-size: 12px;
   }
 }
