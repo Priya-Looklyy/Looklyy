@@ -28,7 +28,7 @@
   justify-content: center;
   align-items: center;
   padding: 60px 40px;
-  background: linear-gradient(135deg, #f8f5ff 0%, #e8e0ff 100%);
+  background: #fff; /* Changed to white to match logo background */
 }
 
 .logo {
@@ -123,7 +123,7 @@
   justify-content: center;
   align-items: center;
   padding: 60px 40px;
-  background: #fff;
+  background: linear-gradient(135deg, #f8f5ff 0%, #e8e0ff 100%); /* Purple gradient background */
 }
 
 .welcome-text {
@@ -261,6 +261,35 @@
   border-color: #8f1eae;
   background: #fff;
   box-shadow: 0 0 0 3px rgba(143, 30, 174, 0.1);
+}
+
+/* Form submit button - match form field width */
+.auth-form .auth-button {
+  width: 100%;
+  border-radius: 12px;
+  border: none;
+  background: #8f1eae;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 15px 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(143, 30, 174, 0.3);
+  font-family: 'Futura', 'Futura PT', 'Arial', sans-serif;
+  margin-top: 10px;
+}
+
+.auth-form .auth-button:hover {
+  background: #7a1a9a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(143, 30, 174, 0.4);
+}
+
+.auth-form .auth-button:active {
+  transform: translateY(0);
 }
 
 .error-message {
