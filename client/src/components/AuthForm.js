@@ -67,6 +67,33 @@ export default function AuthForm() {
 
   return (
     <div className="auth-container">
+      {/* Logo and Tagline Section - Left Side */}
+      <div className="logo-section">
+        <div className="logo">
+          <img 
+            src="/Looklyy Logo.png" 
+            alt="Looklyy" 
+            className="logo-image"
+            onError={(e) => {
+              // Fallback to text logo if image fails to load
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'flex';
+            }}
+          />
+          {/* Fallback text logo */}
+          <div className="logo-text" style={{ display: 'none' }}>
+            <span className="logo-l">L</span>
+            <span className="logo-oo">
+              <span className="circle circle-1"></span>
+              <span className="circle circle-2"></span>
+            </span>
+            <span className="logo-klyy">klyy</span>
+          </div>
+        </div>
+        <p className="tagline">LOOK BOARDS FOR SIMPLY FLAWLESS LOOKS</p>
+      </div>
+
+      {/* Auth Form Section - Right Side */}
       <div className="auth-box">
         <div className="auth-inner">
           {/* Sign In Form */}
@@ -173,19 +200,6 @@ export default function AuthForm() {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Logo and Tagline */}
-      <div className="logo-section">
-        <div className="logo">
-          <span className="logo-l">L</span>
-          <span className="logo-oo">
-            <span className="circle circle-1"></span>
-            <span className="circle circle-2"></span>
-          </span>
-          <span className="logo-klyy">klyy</span>
-        </div>
-        <p className="tagline">LOOK BOARDS FOR SIMPLY FLAWLESS LOOKS</p>
       </div>
     </div>
   )
